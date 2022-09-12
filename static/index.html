@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do Lists</title>
+    <style>
+      #error-message {
+        color: red;
+      }
+
+      .create-form {
+        margin: 3px 0;
+      }
+
+      #task-list {
+        margin-top: 10px;
+      }
+
+      button,
+      input[type="submit"] {
+        cursor: pointer;
+        background-color: white;
+        font-size: 0.9rem;
+        border-radius: 3px;
+        border: 1px solid gray;
+        padding: 1px 10px;
+        margin: 0 2px;
+      }
+
+      button:hover,
+      input[type="submit"]:hover {
+        background-color: lightgray;
+      }
+
+      .task-wrapper {
+        margin: 1px 0;
+        height: 25px;
+      }
+
+      .task-name {
+        width: 200px;
+        display: inline-block;
+      }
+
+      .list > form > h1 {
+        display: inline-block;
+        width: 220px;
+      }
+
+      .list-name {
+        font-size: inherit;
+        width: 200px;
+        height: 45px;
+        box-sizing: border-box;
+      }
+
+      .list-form button,
+      .list-form input[type="submit"] {
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="error-message"></div>
+
+    <form onsubmit="createList(event)" method="post" class="create-form">
+      <input type="text" name="list" id="list" placeholder="List" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <form onsubmit="createTask(event)" method="post" class="create-form">
+      <input type="text" name="task" id="task" placeholder="Task" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <div id="task-list">Loading...</div>
+
+    <script src="dataStore.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

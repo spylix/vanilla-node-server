@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Task",
+  "description": "A task",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Id of the task",
+      "type": "number",
+      "minLength": 1
+    },
+    "name": {
+      "description": "Name of the task",
+      "type": "string",
+      "minLength": 1
+    },
+    "checked": {
+      "description": "Is the task completed",
+      "type": "boolean",
+      "minLength": 1
+    },
+    "list_id": {
+      "description": "Id of a list to which the task is assigned",
+      "type": ["number", "null"]
+    }
+  },
+  "required": ["id", "name", "checked"]
+}

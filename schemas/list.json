@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "List",
+  "description": "A list of tasks",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Id of the list",
+      "type": "number",
+      "minLength": 1
+    },
+    "name": {
+      "description": "Name of the list",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": ["id", "name"]
+}
