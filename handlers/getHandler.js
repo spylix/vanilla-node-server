@@ -1,13 +1,17 @@
 const fs = require("fs");
 
+const processPath = (url, path) => {
+  if (url === "/") {
+    return "./static/index.html";
+  } else if (!fs.existsSync(path)) {
+    return `${path}.html`;
+  }
+  return path;
+};
+
 const getHandler = (response, url) => {
   let path = `./static${url}`;
-
-  if (url === "/") {
-    path = "./static/index.html";
-  } else if (!fs.existsSync(path)) {
-    path = `${path}.html`;
-  }
+  path = processPath(url, path);
 
   fs.readFile(path, function (err, html) {
     if (err) {
@@ -27,4 +31,4 @@ const getHandler = (response, url) => {
   });
 };
 
-module.exports = getHandler;
+module.exports = { getHandler, processPath };

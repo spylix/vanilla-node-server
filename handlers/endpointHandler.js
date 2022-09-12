@@ -75,4 +75,4 @@ const handleSendError = (response, error) => {
   response.end(JSON.stringify({ error }));
 };
 
-module.exports = endpointHandler;
+module.exports = { endpointHandler, sliceUrl };
