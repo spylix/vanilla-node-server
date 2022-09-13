@@ -1,4 +1,4 @@
-const { Pool, Client } = require("pg");
+const { Pool } = require("pg");
 const { Validator } = require("jsonschema");
 
 const poolCredentials = require("../databaseCredentials.json");

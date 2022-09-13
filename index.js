@@ -1,5 +1,4 @@
 const http = require("http");
-const fs = require("fs");
 
 const { getHandler } = require("./handlers/getHandler");
 const { endpointHandler } = require("./handlers/endpointHandler");
