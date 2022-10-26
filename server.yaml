@@ -14,18 +14,17 @@ spec:
     spec:
       containers:
         - name: server
-          image: vanilla-node-server_server
-          imagePullPolicy: "IfNotPresent"
+          image: pawel66556655/vanilla-node-server_server
+          ports:
+          - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: server-clusterip
+  name: server-service
 spec:
-  type: NodePort
+  type: LoadBalancer
+  ports:
+  - port: 80
   selector:
     app: server
-  ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 30001

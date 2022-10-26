@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: database
-          image: vanilla-node-server_database
+          image: pawel66556655/vanilla-node-server_database
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 5432
