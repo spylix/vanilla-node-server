@@ -1,1 +1,1 @@
-# vanilla-node-server
+# Vanilla Node.js server
