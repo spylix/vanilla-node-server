@@ -28,6 +28,8 @@ jobs:
       contents: read
       id-token: write
     runs-on: ubuntu-latest
+    needs:
+      - runTests
     steps:
       - uses: actions/checkout@v3
       - uses: azure/login@v1.4.3
