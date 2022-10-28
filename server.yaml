@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: pawel66556655/vanilla-node-server_server
+          image: pawel66556655/vanilla-node-server
           ports:
           - containerPort: 80
 ---
