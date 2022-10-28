@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: acrworkflow1666964895974.azurecr.io
+          image: pawel66556655/vanilla-node-server
           ports:
           - containerPort: 80
 ---
