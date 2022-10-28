@@ -6,10 +6,10 @@ name: vnsDeployment
   workflow_dispatch: {}
 env:
   ACR_RESOURCE_GROUP: vnsRG
-  AZURE_CONTAINER_REGISTRY: acrworkflow1666964895974
+  AZURE_CONTAINER_REGISTRY: vnsacr
   CLUSTER_NAME: vnsAKS
   CLUSTER_RESOURCE_GROUP: vnsRG
-  CONTAINER_NAME: image-workflow-1666964895974
+  CONTAINER_NAME: vanilla-node-server
   DEPLOYMENT_MANIFEST_PATH: |
     ./server.yaml
 jobs:
