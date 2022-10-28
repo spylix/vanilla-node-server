@@ -1,4 +1,4 @@
-name: vnsDeployment
+name: deployment
 "on":
   push:
     branches:
@@ -10,8 +10,7 @@ env:
   CLUSTER_NAME: vnsAKS
   CLUSTER_RESOURCE_GROUP: vnsRG
   CONTAINER_NAME: vanilla-node-server
-  DEPLOYMENT_MANIFEST_PATH: |
-    ./server.yaml
+  DEPLOYMENT_MANIFEST_PATH: ./server.yaml
 jobs:
   runTests:
     runs-on: ubuntu-latest
