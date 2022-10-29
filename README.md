@@ -8,6 +8,9 @@
 
 [Description of Kubernetes & Docker setup](https://medium.com/pawel66556655/b6d0ef9a29d9/)
 
+[Description of automatic deployment to Azure](https://medium.com/@pawel66556655/creating-a-vanilla-node-js-rest-app-with-postgresql-aa1a66fcb0b7)
+
+
 ## Setup without containers
 
 Prepare PostgreSQL database based on information from `databaseCredentials.json` and create the tables as described in `database/create_tables.sql`
